@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 定义使用哪种规范进行解析配置文件 -->
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN/EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- bean：定义java bean -->
+    <bean id = "helloWorld" class = "spring.HelloWord"></bean>
+    <bean id = "helloChina" class = "spring.HelloWorld"></bean>
+    <bean id = "person" class = "spring.Person">
+        <!-- 与其它java bean建立依赖关系 -->
+        <property name="helloMessage" ref="helloWorld"></property>
+         <property name="helloMessage6" ref="helloChina"></property >
+    </bean>
+</beans>
